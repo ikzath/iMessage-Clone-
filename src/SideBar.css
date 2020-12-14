@@ -1,0 +1,52 @@
+
+.sidebar{    
+    flex: 0.35;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(84, 141, 194);
+    border-right: 1px solid lightgray;
+}
+
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+}
+
+.sidebar__avatar{
+    cursor: pointer;
+    margin: 10px;
+}
+
+.sidebar__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: whitesmoke;
+    color: gray;
+    border-radius: 5px;
+}
+
+.sidebar__input > input{
+    border: none;
+    background: transparent;
+    outline-width: 0;
+}
+
+.sidebar__chats {
+    overflow: scroll;
+}
+
+/* hide scrollbar for firefox, google and Opera */
+.sidebar__chats::-webkit-scrollbar {
+    display: none;
+}
+
+/* hide scrollbar for IE, MS and Edge */
+.sidebar__chats {
+    -ms-text-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+}
