@@ -12,7 +12,7 @@ import { useSelector} from "react-redux";
 function Sidebar() {
 
 const [chat, setchat] = useState([]);
-
+const [isShown, setIsShown] = useState(false);
  const user = useSelector(selectUser);  
  
     useEffect(() => {
@@ -42,7 +42,13 @@ const [chat, setchat] = useState([]);
     <div className='sidebar'>
 
         <div className='sidebar__header'>
-        <Avatar src={user.photo} onClick={() => auth.signOut()} className='sidebar__avatar' />
+        <Avatar src={user.photo} onClick={() => auth.signOut()} className='sidebar__avatar'  
+         onMouseEnter={() => setIsShown(true)} 
+         onMouseLeave={() => setIsShown(false)}
+            /> 
+        {isShown && (
+            <strong className='sidebar__hoverMessage'>click to logout</strong>
+         )}
 
         <div className='sidebar__input'>
             <SearchIcon />

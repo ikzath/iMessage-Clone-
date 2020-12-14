@@ -20,6 +20,10 @@
     margin: 10px;
 }
 
+.sidebar__hoverMessage{
+    background-color: rgb(60, 231, 126);
+}
+
 .sidebar__input {
     display: flex;
     align-items: center;

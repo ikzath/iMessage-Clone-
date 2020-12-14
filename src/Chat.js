@@ -68,7 +68,7 @@ useEffect(() => {
              <h4>
                  <span className='chat__name'>{username}</span>
              </h4>
-            <strong>Details</strong>
+             <p>Powered by Firebase Firestore</p>
          </div>
         
         {/* chat messages */}
