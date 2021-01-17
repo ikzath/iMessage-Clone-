@@ -13,6 +13,8 @@ function Sidebar() {
 
 const [chat, setchat] = useState([]);
 const [isShown, setIsShown] = useState(false);
+const [isShown2, setIsShown2] = useState(false);
+
  const user = useSelector(selectUser);  
  
     useEffect(() => {
@@ -55,8 +57,14 @@ const [isShown, setIsShown] = useState(false);
             <input placeholder='search' />
         </div>
 
-        <IconButton onClick={addData} variant='outlined' className='sidebar__inputButton'>
+        <IconButton onClick={addData} variant='outlined' className='sidebar__inputButton'
+            onMouseEnter={() => setIsShown2(true)} 
+            onMouseLeave={() => setIsShown2(false)}
+        >
             <RateReviewOutlinedIcon  />
+        {isShown2 && (
+            <small className='sidebar__hoverMessage2'>create new chatroom</small>
+         )}
         </IconButton> 
         </div>
 

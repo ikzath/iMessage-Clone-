@@ -24,6 +24,11 @@
     background-color: rgb(60, 231, 126);
 }
 
+
+.sidebar__hoverMessage2 {
+    background-color: rgb(226, 81, 178);
+}
+
 .sidebar__input {
     display: flex;
     align-items: center;

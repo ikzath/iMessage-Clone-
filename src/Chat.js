@@ -68,7 +68,7 @@ useEffect(() => {
              <h4>
                  <span className='chat__name'>{username}</span>
              </h4>
-             <p>Powered by Firebase Firestore</p>
+                <strong>Enter a chat-room or create your own</strong>
          </div>
         
         {/* chat messages */}
